@@ -17,11 +17,11 @@
 
 ## 界面截图
 
-![截图 1](https://github.com/iAJue/MacWeb/raw/main/images/1.png)
-![截图 2](https://github.com/iAJue/MacWeb/raw/main/images/2.png)
-![截图 3](https://github.com/iAJue/MacWeb/raw/main/images/3.png)
-![截图 4](https://github.com/iAJue/MacWeb/raw/main/images/4.png)
-![截图 5](https://github.com/iAJue/MacWeb/raw/main/images/5.png)
+![截图 1](https://github.com/iAJue/MacWeb/blob/main/images/1.jpg)
+![截图 2](https://github.com/iAJue/MacWeb/blob/main/images/2.jpg)
+![截图 3](https://github.com/iAJue/MacWeb/blob/main/images/3.jpg)
+![截图 4](https://github.com/iAJue/MacWeb/blob/main/images/4.jpg)
+![截图 5](https://github.com/iAJue/MacWeb/blob/main/images/5.jpg)
 
 ## 开始使用
 
