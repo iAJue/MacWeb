@@ -1,14 +1,14 @@
-### 项目概述
+## MacWeb
 
 在当今的 Web 开发领域，用户体验和界面设计变得越来越重要。
 
 Mac Web Vue Template 这是一个受 macOS 设计启发的现代优雅的 Vue.js Web 模板, 是一个基于 Vue.js 的现代化 Web 应用模板，它的设计灵感来源于 macOS 的优雅界面。这个项目不仅提供了美观的 UI 设计，还包含了完整的项目结构和最佳实践。
 
-#### 在线演示
+### 在线演示
 
 你可以通过访问 [WebAi](https://mac.moejue.cn/) 来体验这个模板的实际效果。邀请码(MoeJue)
 
-### 核心特性
+## 核心特性
 
 1. **macOS 风格的 UI 设计**
    - 采用 macOS 的设计语言
@@ -27,7 +27,7 @@ Mac Web Vue Template 这是一个受 macOS 设计启发的现代优雅的 Vue.js
    - 完美适配各种屏幕尺寸
    - 流畅的移动端体验
 
-### 项目结构解析
+## 项目结构解析
 
 项目采用了清晰且模块化的目录结构：
 
@@ -46,7 +46,7 @@ src/
 
 这种结构设计使得项目具有良好的可维护性和可扩展性。
 
-### 开发规范
+## 开发规范
 
 项目遵循严格的开发规范：
 
@@ -60,13 +60,13 @@ src/
    - 遵循 Vue 官方风格指南
    - 模块化开发
 
-### 快速开始
+## 快速开始
 
-#### 环境要求
+### 环境要求
 - Node.js (v22+)
 - npm
 
-### 安装步骤
+## 安装步骤
 ```bash
 # 克隆项目
 git clone http://github.com/iAJue/macWeb/
@@ -81,7 +81,7 @@ npm run dev
 npm run build
 ```
 
-### 项目亮点
+## 项目亮点
 
 1. **优雅的动画效果**
    - 精心设计的过渡动画
@@ -95,7 +95,7 @@ npm run build
    - Vite 构建工具带来的快速开发体验
    - 优化的资源加载
 
-### 使用场景
+## 使用场景
 
 这个模板特别适合以下场景：
 
@@ -104,7 +104,7 @@ npm run build
 3. 需要快速开发的原型项目
 4. 个人作品集展示
 
-### 总结
+## 总结
 
 Mac Web Vue Template 不仅是一个模板，更是一个完整的解决方案。它提供了：
 
@@ -115,14 +115,14 @@ Mac Web Vue Template 不仅是一个模板，更是一个完整的解决方案�
 
 通过使用这个模板，开发者可以快速构建出具有 macOS 风格的现代化 Web 应用，大大提升开发效率和用户体验。
 
-### 参考资源
+## 参考资源
 
 - [项目仓库](http://github.com/iAJue/macWeb/)
 - [项目演示](https://mac.moejue.cn/)
 - [Vue.js 官方文档](https://vuejs.org/)
 - [Vite 官方文档](https://vitejs.dev/)
 
-### 界面截图
+## 界面截图
 
 ![](https://gh-proxy.com/github.com/iAJue/MoeJueBlogPic/blob/master/Images/2025/05/11/1.jpg)  
 ![](https://gh-proxy.com/github.com/iAJue/MoeJueBlogPic/blob/master/Images/2025/05/11/2.jpg)  
