@@ -3,7 +3,7 @@ import { ElMessage } from 'element-plus';
 
 // 创建一个 axios 实例
 const httpClient = axios.create({
-    baseURL: 'http://localhost:5173/',
+    baseURL: import.meta.env.VITE_API_BASE_URL,
     timeout: 10000, 
     headers: {
         'Content-Type': 'application/json',
