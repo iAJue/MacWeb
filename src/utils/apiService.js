@@ -1,6 +1,6 @@
 import { post, get } from './request';
 
-const API_BASE_URL = 'https://ai.moejue.cn';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 /**
  * 注册新用户
