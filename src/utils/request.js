@@ -3,7 +3,7 @@ import { ElMessage } from 'element-plus';
 
 // 创建一个 axios 实例
 const httpClient = axios.create({
-    baseURL: 'https://ai.moejue.cn/',
+    baseURL: 'http://localhost:5173/',
     timeout: 10000, 
     headers: {
         'Content-Type': 'application/json',

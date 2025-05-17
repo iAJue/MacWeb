@@ -1,6 +1,6 @@
 import { post, get } from './request';
 
-const API_BASE_URL = 'https://ai.moejue.cn';
+const API_BASE_URL = 'http://localhost:5173/';
 
 /**
  * 注册新用户
