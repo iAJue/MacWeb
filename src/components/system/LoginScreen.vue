@@ -381,7 +381,7 @@ onMounted(async () => {
     display: flex;
     align-items: center;
     margin: 15px auto 20px;
-    width: 220px;
+    width: 230px;
     position: relative;
 }
 
