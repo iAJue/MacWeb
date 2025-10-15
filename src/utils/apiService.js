@@ -1,5 +1,10 @@
 import { post, get } from './request';
+import { mockData, mockSSEResponse } from './mockData';
 
+// 后端服务已关闭，开启预览模式
+let isPreviewMode = true;
+
+// 后端接口
 const API_BASE_URL = 'https://ai.moejue.cn';
 
 /**
@@ -9,6 +14,9 @@ const API_BASE_URL = 'https://ai.moejue.cn';
  * @returns {Promise<object>} - API响应
  */
 export const registerUser = (fingerprint, inviteCode) => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.register);
+    }
     return post('/api/register', { fingerprint, inviteCode });
 };
 
@@ -17,6 +25,9 @@ export const registerUser = (fingerprint, inviteCode) => {
  * @returns {Promise<object>} - 用户信息对象
  */
 export const getCurrentUser = () => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.getCurrentUser);
+    }
     return get('/api/me');
 };
 
@@ -25,6 +36,9 @@ export const getCurrentUser = () => {
  * @returns {Promise<object>} - 签到状态信息，包含连续签到天数、已签到日期等
  */
 export const getSignInStatus = () => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.getSignInStatus);
+    }
     return get('/api/sign-in/status');
 };
 
@@ -33,6 +47,9 @@ export const getSignInStatus = () => {
  * @returns {Promise<object>} - 签到结果，包含获得的积分和消息等信息
  */
 export const signIn = () => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.signIn);
+    }
     return post('/api/sign-in', {});
 };
 
@@ -44,6 +61,12 @@ export const signIn = () => {
  * @param {function} onError - 处理错误事件或网络错误的回调函数。
  */
 export const generateCodeStream = async (params, onData, onComplete, onError) => {
+    // 检查预览模式
+    if (isPreviewMode) {
+        mockSSEResponse('generateCode', onData, onComplete, onError);
+        return;
+    }
+
     try {
         const response = await fetch(`${API_BASE_URL}/api/generate`, {
             method: 'POST',
@@ -132,6 +155,12 @@ export const generateCodeStream = async (params, onData, onComplete, onError) =>
  * @param {function} onError - 处理错误事件的回调函数
  */
 export const continueConversationStream = async (params, onData, onComplete, onError) => {
+    // 检查预览模式
+    if (isPreviewMode) {
+        mockSSEResponse('continueConversation', onData, onComplete, onError);
+        return;
+    }
+
     try {
         const response = await fetch(`${API_BASE_URL}/api/continue-conversation`, {
             method: 'POST',
@@ -210,6 +239,9 @@ export const continueConversationStream = async (params, onData, onComplete, onE
  * @returns {Promise<object>} - 项目列表响应
  */
 export const getUserProjects = () => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.getUserProjects);
+    }
     return get('/api/projects');
 };
 
@@ -219,6 +251,9 @@ export const getUserProjects = () => {
  * @returns {Promise<object>} - 项目详情响应
  */
 export const getProjectById = (projectId) => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.getProjectById);
+    }
     return get(`/api/projects/${projectId}`);
 };
 
@@ -229,6 +264,9 @@ export const getProjectById = (projectId) => {
  * @returns {Promise<string>} - HTML代码内容
  */
 export const getProjectVersionCode = (projectId, versionId) => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.getProjectVersionCode);
+    }
     return get(`/api/projects/${projectId}/versions/${versionId}/html`, {}, 'text');
 };
 
@@ -240,6 +278,9 @@ export const getProjectVersionCode = (projectId, versionId) => {
  * @returns {Promise<object>} - 更新结果
  */
 export const updateProject = (projectId, projectData) => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.updateProject);
+    }
     return post(`/api/projects/${projectId}`, projectData, 'PUT');
 };
 
@@ -249,6 +290,9 @@ export const updateProject = (projectId, projectData) => {
  * @returns {Promise<object>} - 删除结果
  */
 export const deleteProject = (projectId) => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.deleteProject);
+    }
     return post(`/api/projects/${projectId}`, {}, 'DELETE');
 };
 
@@ -257,5 +301,8 @@ export const deleteProject = (projectId) => {
  * @returns {Promise<Object>} - 包含所有模型积分消耗配置的对象
  */
 export const getModelCreditCosts = async () => {
+    if (isPreviewMode) {
+        return Promise.resolve(mockData.getModelCreditCosts);
+    }
     return await get('/api/credit-costs');
 };

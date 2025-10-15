@@ -8,8 +8,8 @@
             <div class="notification-item">
                 <img src="/assets/icons/Messages.png" alt="消息" width="40" height="40">
                 <div class="notification-text">
-                    <strong>消息</strong>
-                    <p>没有新消息</p>
+                    <strong>新消息</strong>
+                    <p>后端服务已关闭，你当前看到的所有数据都是模拟数据</p>
                 </div>
             </div>
             <div class="notification-item">
